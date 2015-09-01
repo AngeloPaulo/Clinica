@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+
     EditText etUser, etPass;
     Button btIngresar;
 
