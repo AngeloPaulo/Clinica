@@ -1,8 +1,8 @@
 package apdroid.clinica;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +13,23 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText etUser, etPass;
     Button btIngresar;
+    View.OnClickListener btIngresarOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String user = etUser.getText().toString();
+            String pass = etPass.getText().toString();
 
+            if (user.equalsIgnoreCase("angelo") && pass.equalsIgnoreCase("123456")) {
+                Intent i=new Intent(getApplicationContext(),MenuActivity.class);
+                startActivity(i);
+            }else{
+                Toast.makeText(getApplicationContext(), "Ups !!!", Toast.LENGTH_LONG).show();
+            }
+
+
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,26 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         btIngresar.setOnClickListener(btIngresarOnClickListener);
 
 
-
     }
-
-    View.OnClickListener btIngresarOnClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String user = etUser.getText().toString();
-            String pass = etPass.getText().toString();
-
-            if (user.equalsIgnoreCase("Angelo") && pass.equalsIgnoreCase("qwerty")) {
-                Intent i=new Intent(getApplicationContext(),MenuActivity.class);
-                startActivity(i);
-            }else{
-                Toast.makeText(getApplicationContext(), "Ups !!!", Toast.LENGTH_LONG).show();
-            }
-
-
-
-        }
-    };
 
 
 
