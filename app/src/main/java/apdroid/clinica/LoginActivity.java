@@ -13,6 +13,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText etUser, etPass;
     Button btIngresar;
+
     View.OnClickListener btIngresarOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (user.equalsIgnoreCase("angelo") && pass.equalsIgnoreCase("123456")) {
                 Intent i=new Intent(getApplicationContext(),MenuActivity.class);
+                i.putExtra("user", 1);
                 startActivity(i);
             }else{
                 Toast.makeText(getApplicationContext(), "Ups !!!", Toast.LENGTH_LONG).show();
