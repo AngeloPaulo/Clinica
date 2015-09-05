@@ -90,7 +90,7 @@
                     android:id="@+id/btCal"
                     android:layout_width="@dimen/button2"
                     android:layout_height="match_parent"
-                    android:background="@drawable/btcalendar" />
+                    />
 
 
             </LinearLayout>

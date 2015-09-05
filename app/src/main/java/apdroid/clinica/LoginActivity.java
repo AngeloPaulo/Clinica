@@ -21,7 +21,8 @@ public class LoginActivity extends AppCompatActivity {
             String pass = etPass.getText().toString();
 
             if (user.equalsIgnoreCase("angelo") && pass.equalsIgnoreCase("123456")) {
-                Intent i=new Intent(getApplicationContext(),MenuActivity.class);
+//                Intent i=new Intent(getApplicationContext(),MenuActivity.class);
+                Intent i=new Intent(getApplicationContext(),MainActivity.class);
                 i.putExtra("user", 1);
                 startActivity(i);
             }else{
@@ -45,6 +46,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
 
